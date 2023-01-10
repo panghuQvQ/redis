@@ -22,12 +22,12 @@ public class JedisClusterTest {
         config.setMinIdle(5);
 
         Set<HostAndPort> jedisClusterNode = new HashSet<HostAndPort>();
-        jedisClusterNode.add(new HostAndPort("192.168.0.61", 8001));
-        jedisClusterNode.add(new HostAndPort("192.168.0.62", 8002));
-        jedisClusterNode.add(new HostAndPort("192.168.0.63", 8003));
-        jedisClusterNode.add(new HostAndPort("192.168.0.61", 8004));
-        jedisClusterNode.add(new HostAndPort("192.168.0.62", 8005));
-        jedisClusterNode.add(new HostAndPort("192.168.0.63", 8006));
+        jedisClusterNode.add(new HostAndPort("192.168.65.61", 8001));
+        jedisClusterNode.add(new HostAndPort("192.168.65.62", 8002));
+        jedisClusterNode.add(new HostAndPort("192.168.65.63", 8003));
+        jedisClusterNode.add(new HostAndPort("192.168.65.61", 8004));
+        jedisClusterNode.add(new HostAndPort("192.168.65.62", 8005));
+        jedisClusterNode.add(new HostAndPort("192.168.65.63", 8006));
 
         JedisCluster jedisCluster = null;
         try {

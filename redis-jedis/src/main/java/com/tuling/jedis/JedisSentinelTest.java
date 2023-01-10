@@ -24,9 +24,9 @@ public class JedisSentinelTest {
 
         String masterName = "mymaster";
         Set<String> sentinels = new HashSet<String>();
-        sentinels.add(new HostAndPort("192.168.0.60",26379).toString());
-        sentinels.add(new HostAndPort("192.168.0.60",26380).toString());
-        sentinels.add(new HostAndPort("192.168.0.60",26381).toString());
+        sentinels.add(new HostAndPort("192.168.65.60",26379).toString());
+        sentinels.add(new HostAndPort("192.168.65.60",26380).toString());
+        sentinels.add(new HostAndPort("192.168.65.60",26381).toString());
         //JedisSentinelPool其实本质跟JedisPool类似，都是与redis主节点建立的连接池
         //JedisSentinelPool并不是说与sentinel建立的连接池，而是通过sentinel发现redis主节点并与其建立连接
         JedisSentinelPool jedisSentinelPool = new JedisSentinelPool(masterName, sentinels, config, 3000, null);
