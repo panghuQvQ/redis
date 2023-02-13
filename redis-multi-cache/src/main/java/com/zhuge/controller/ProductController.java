@@ -22,7 +22,7 @@ public class ProductController {
     }
 
     @RequestMapping("/get/{productId}")
-    public Product getProduct(@PathVariable Long productId) {
+    public Product getProduct(@PathVariable Long productId) throws InterruptedException {
         return productService.get(productId);
     }
 
